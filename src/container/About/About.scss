@@ -1,0 +1,103 @@
+.app__about {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+}
+
+.app__profiles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 0rem;
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 650px) {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}
+
+.app__profiles-item {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+
+  .app__profiles-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    span {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--black-color);
+  }
+
+  p {
+    color: var(--gray-color);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .app__profiles-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+
+    .skill-tag {
+      padding: 0.4rem 0.8rem;
+      background: var(--lightGray-color);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--secondary-color);
+      font-weight: 500;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  }
+
+  @media screen and (min-width: 2000px) {
+    padding: 2.5rem;
+
+    .app__profiles-icon {
+      width: 80px;
+      height: 80px;
+
+      span {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    padding: 1.5rem;
+  }
+}
